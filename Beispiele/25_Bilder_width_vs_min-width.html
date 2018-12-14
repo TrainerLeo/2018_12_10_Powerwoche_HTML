@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bilder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(182, 255, 255);
+        }
+
+        #wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .img-container {
+            width: 40%;
+            height: auto;
+            margin: 3em auto;
+            padding: 2em;
+            border: medium solid rgb(139, 121, 0);
+            background-color: rgb(255, 248, 205);
+        }
+
+        #img1 {
+            width: 100%;
+            height: auto;
+        }
+
+        #img2 {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            margin-bottom: 0.5em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(0, 54, 99);
+        }
+
+        span{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div class="img-container">
+            <figure>
+                <figcaption>Bild mit
+                    <code>width:100%;</code>
+                </figcaption>
+                <img id="img1" src="../images/bild_klein.jpg" alt="Möwe am Strand" />
+
+            </figure>
+        </div>
+        <div class="img-container">
+            <figure>
+                <figcaption>Bild mit
+                    <code><span>max-</span>width:100%;</code>
+                </figcaption>
+                <img id="img2" src="../images/bild_klein.jpg" alt="Möwe am Strand" />
+
+            </figure>
+        </div>
+    </div>
+</body>
+
+</html>

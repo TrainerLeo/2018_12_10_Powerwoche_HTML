@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outline/Section</title>
+
+  <style>
+    .ref {
+      font-weight: bold;
+      color: green;
+      padding: 0.5em;
+      border: 2px solid green;
+    }
+/* 
+    article>h3{
+      font-size: 2em;
+    } */
+  </style>
+
+</head>
+
+<body>
+  <!-- Beispielquelle: https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm/ 
+    outlining-tool: https://gsnedders.html5.org/outliner/process.py -->
+
+  <!-- wenn eine Überschrift in einer tieferen Ebene auf h1 geändert wird, bleibt sie trotzdem gleich groß in der Darstellung! -->
+
+  <div>
+    <h1>Horses for sale</h1>
+
+    <section>
+      <h2>Mares</h2>
+
+      <article>
+        <h3>Pink Diva</h3>
+        <p>Pink Diva has given birth to three Grand National winners.</p>
+      </article>
+
+      <article>
+        <h3>Ring a Rosies</h3>
+        <p>Ring a Rosies has won the Derby three times.</p>
+      </article>
+
+      <article>
+        <h3>Chelsea’s Fancy</h3>
+        <p>Chelsea’s Fancy has given birth to three Gold Cup winners.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Stallions</h2>
+
+      <article>
+        <h3>Korah’s Fury</h3>
+        <p>Korah’s Fury has fathered three champion race horses.</p>
+      </article>
+
+      <article>
+        <h3>Sea Pioneer</h3>
+        <p>Sea Pioneer has won The Oaks three times.</p>
+      </article>
+
+      <article>
+        <h3>Brown Biscuit</h3>
+        <p>Brown Biscuit has fathered nothing of any note.</p>
+      </article>
+    </section>
+
+    <p>All our horses come with full paperwork and a family tree.</p>
+  </div>
+
+  <p class="ref">Dieses Beispiel stammt von
+    <a href="https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm/">
+      dieser Seite.</a>
+  </p>
+  <p class="ref">Ein
+    <a href="https://gsnedders.html5.org/outliner">Outlining-Tool</a> wird dazu verwendtet, die Hierarchie innerhalb eines Dokuments zu analysieren.</p>
+
+
+
+  <script>  
+
+  </script>
+
+</body>
+
+</html>

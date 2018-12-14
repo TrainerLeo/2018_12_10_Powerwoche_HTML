@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabelle</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            /* 
+            border-width: 1px;
+            border-style: solid;
+            border-color: forestgreen; 
+            */
+            /* shorthand property (Kurzschreibweise) */
+            border: 1px solid forestgreen;
+        }
+
+        thead>tr:only-child{
+            background-color: green;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <caption>Obstlager</caption>
+        <thead>
+            <!-- Tabellenzeile (table row = tr) -->
+            <tr>
+                <!-- Spaltenüberschrift (table header = th) -->
+                <th>Obst</th>
+                <th>Anzahl</th>
+                <th>Preis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Tabelleneinträge (table data = td) -->
+                <td>Äpfel</td>
+                <td>50</td>
+                <td>0.10</td>
+            </tr>
+            <tr>
+                <td>Bananen</td>
+                <td>70</td>
+                <td>0.20</td>
+            </tr>
+            <tr>
+                <td>Mangos</td>
+                <td>20</td>
+                <td>1.20</td>
+            </tr>
+            <tr>
+                <td>Birnen</td>
+                <td>100</td>
+                <td>0.15</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Leos Tabelle</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

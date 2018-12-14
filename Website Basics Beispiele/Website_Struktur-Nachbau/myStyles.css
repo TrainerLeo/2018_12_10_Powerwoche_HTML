@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Verdana, Arial, sans-serif;
+    font-size: 18px;
+    background-color: whitesmoke;
+}
+
+hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.clearboth{
+    clear: both;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 7em  2.4rem 1fr repeat(4, auto);
+    min-height: 100vh;
+    min-width: 300px;
+    max-width: 100vw;
+}
+
+#company-name-box{
+    grid-column: 1/13;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem 1.5rem;
+    overflow: hidden;
+}
+
+#company-name{
+    font-family: 'Bauhaus 93', 'Segoe UI Black', 'Cooper Black', sans-serif;
+    font-size: 2.5em;
+    color: #808008;
+}
+
+#logo-top{
+    font-size: 4rem;
+    font-weight: bold;
+    color: orangered;
+}
+
+#top-navbar-container{
+    grid-column: 1/13;
+    grid-row: 2/3;
+    background-color: #808008;
+    color: whitesmoke;
+    font-size: 1.3em;
+    overflow: hidden;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.6);
+    z-index: 10;
+    display: flex;
+    align-content: center;
+    position: sticky;
+    top:0;
+}
+
+#top-navbar-container ul{
+    list-style-type: none;
+}
+
+#top-navbar-container ul li{
+    float: left;
+}
+
+#top-navbar-container ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 0.3rem 2rem;
+}
+
+#top-navbar-container ul li a:hover{
+    background-color: orangered;
+}
+
+#top-navbar-container ul li a.house{
+    font-weight: bold;
+}
+
+#top-navbar-container ul li a.normal{
+    display: inline-block;
+}
+
+#top-navbar-container ul li a.invisible{
+    display: none;
+}
+
+#side-navbar-container{
+    grid-column: 1/3;
+    grid-row: 3/7;
+    background-color: lightgray;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    /* Position: sticky funktioniert hier nicht wegen Grid! */
+/*     position: sticky;
+    top: 2.4rem; */
+}
+
+#side-navbar-box{
+    width: 100%;
+    font-size: 1em;
+    overflow-y: scroll;
+}
+
+#side-navbar-box ul li, .side-navbar-header{
+    padding-left: 1.5rem;
+}
+
+.side-navbar-header{
+    font-size: 1.3em;
+}
+
+#side-navbar-box ul{
+    list-style-type: none;
+}
+
+#side-navbar-box ul li{
+    color: #808080;
+}
+
+#side-navbar-box ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+#side-navbar-box ul li:hover{
+    background-color: #808008;
+    color: whitesmoke;
+}
+
+#main-content-container{
+    grid-column: 3/11;
+    grid-row: 3/5;
+    padding: 2rem;
+}
+
+#main-content-container ul{
+    margin-left: 1em;
+    padding-left: 0.5em;
+}
+
+#right-add-container{
+    grid-column: 11/13;
+    grid-row: 3/5;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#bottom-image-container{
+    grid-column: 3/13;
+    grid-row: 5/6;
+    background-color: #808080;
+}
+
+#footer-info-container{
+    grid-column: 3/13;
+    grid-row: 6/7;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#page-footer{
+    grid-column: 1/13;
+    grid-row: 7/8;
+    padding: 2rem;
+    background-color: #f0f0f0;
+    color: #808080;
+    text-align: center;
+    box-shadow: 0 -1px 1px rgba(128, 128, 128, 0.4);
+}
+
+.example, .text-box, .description-box{
+    padding: 1rem;
+}
+
+.example, .description-box{
+    border-left: 4px solid #808008;
+}
+
+.text-box::first-letter{
+    font-family: 'Vivaldi', serif;
+    font-size: 2.5rem;
+}
+
+.description-box{
+    background-color: rgba(128, 128, 8, 0.4);
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.description-box::first-letter{
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.example-box{
+    background-color: lightgray;
+    border-radius: 2em;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.5), 2px 3px 4px rgba(0,0,0,0.3);
+    padding: 2.5em;
+    margin: 1.5em;
+}
+
+.example{
+    background-color: whitesmoke;
+    margin: 1rem;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.image-box, .footer-info{
+    width: 23%;
+    margin-top: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+.image-box>img{
+    width: 100%;
+    height: auto;
+}
+
+.footer-info{
+    border: 2px solid #808008;
+    border-radius: 2em;
+    padding: 1em;
+    text-align: center;
+}
+
+ul.impressum-links{
+    list-style-type: none;
+    margin-bottom: 2rem;
+}
+
+ul.impressum-links li{
+    display: inline;
+}
+
+ul.impressum-links li a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 0.3rem 2rem;
+}
+
+ul.impressum-links li a:hover{
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px rgba(255, 69, 0, 0.4), 0 0 2px rgba(255, 69, 0, 0.2);
+}
+
+ul.impressum-links li a:not(.last){
+    border-right: 1px solid #808008;
+}
+
+#company-name-box-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#company-name-bottom{
+    font-family: 'Bauhaus 93', 'Segoe UI Black', 'Cooper Black', sans-serif;
+    color: #808008;
+    padding: 0 1rem;
+}
+
+.logo-bottom{
+    color: orangered;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.add-box{
+    max-width: 150px;
+    max-height: 500px;
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid #808080;
+}
+
+.add-box>img{
+    width: 100%;
+    display: block;
+}
+
+.add-box:hover{
+    cursor: pointer;
+    box-shadow: 0 0 3px 2px rgba(255, 69, 0, 0.4), 0 0 4px 2px rgba(255, 69, 0, 0.2);
+}
+
+.portrait-add{
+    display: none;
+}
+
+#close-sidenav{
+    font-size: 2.5rem;
+    font-weight: bold;
+    clear: both;
+    float: right;
+    color: whitesmoke;
+    padding: 0 0.3em;
+    display: none;
+}
+
+#close-sidenav a{
+    color: inherit;
+    text-decoration: none;
+}
+
+#open-sidenav-button{
+    display: none;
+    position: fixed;
+    top: 4.8rem;
+    left: 0;
+    color: rgba(255, 69, 0, 0.5);
+    font-size: 4em;
+    z-index: 9;
+    cursor: pointer;
+}
+
+#open-sidenav-button a{
+    text-decoration: none;
+    color: inherit;
+}

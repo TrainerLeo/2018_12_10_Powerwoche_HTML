@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Data Dash (data-)</title>
+    <style>
+        body {
+            padding: 3em;
+            font-family: Georgia, serif;
+        }
+
+        #content-box {
+            background-color: #f3f3f3;
+            padding: 2em;
+            width: 70%;
+            box-shadow: 0.4em 0.4em 0.6em rgba(0, 128, 0, 0.4), 0.2em 0.2em 0.4em rgba(0, 128, 0, 0.7);
+        }
+
+        .text-box {
+            border: 1px solid green;
+            padding: 2em;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="content-box">
+
+
+        <!-- Beispiel für data- ("data dash"): mit data- kann ich so tun, als hätte ein Element
+     ein zusätzliches Attribut, das ich auch abfragen kann: -->
+
+        <ul>
+            <li onclick="showDetails(this)" id="li1" data-which-property="rund">Ball</li>
+            <li onclick="showDetails(this)" id="li2" data-which-property="spitz">Nagel</li>
+            <li onclick="showDetails(this)" id="li3" data-which-property="eckig">Würfel</li>
+        </ul>
+
+
+
+    </div>
+
+
+    <script>
+        /* data- kann mittels getAttribute() abgefragt werden... */
+        /*
+            function showDetails(thing) {
+              var thingProperty = thing.getAttribute("data-which-property");
+              thing.innerHTML = "Ein " + thing.innerHTML + " ist " + thingProperty + ".";
+            }
+        */
+
+        /* ...aber besser mit .dataset abfragen: */
+         function showDetails(thing) {
+            var thingProperty = thing.dataset.whichProperty;
+            thing.innerHTML = "Ein " + thing.innerHTML + " ist " + thingProperty + ".";
+        } 
+
+
+
+    </script>
+
+</body>
+
+</html>

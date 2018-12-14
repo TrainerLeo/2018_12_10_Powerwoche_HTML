@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Data Dash (data-)</title>
+    <!-- hier wird der Titel eingegeben, der am Tab/Reiter (Registerkarte) oben angezeigt wird -->
+    <style>
+        body {
+            padding: 3em;
+            font-family: Georgia, serif;
+            background: linear-gradient(#f3f3f3 25%, #e9f3eb, #d7f0dc, #c4eccc 90%, green);
+            background-attachment: fixed;
+        }
+
+        #content-box {
+            background-color: #f3f3f3;
+            padding: 2em;
+            width: 70%;
+            box-shadow: 0.4em 0.4em 0.6em rgba(0, 128, 0, 0.4), 0.2em 0.2em 0.4em rgba(0, 128, 0, 0.7);
+        }
+
+        ul {
+            border: 1px solid green;
+            padding: 2em;
+            display: inline-block;
+        }
+
+        .columns-box {
+            column-count: 3;
+            column-gap: 4em;
+            column-rule: medium solid rgba(0, 128, 0, 0.7);
+            margin-top: 1em;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="content-box">
+        <h1>Eigenschaften von Gegenständen</h1>
+        <p>Klicke auf die Liste, um zu sehen, welche Eigenschaften die Gegenstände haben:</p>
+
+        <!-- Beispiel für data- ("data dash"): mit data- kann ich so tun, als hätte ein Element
+     ein zusätzliches Attribut, das ich auch abfragen kann: -->
+
+        <ul>
+            <li onclick="showDetails(this)" id="li1" data-which-property="rund">Ball</li>
+            <li onclick="showDetails(this)" id="li2" data-which-property="spitz">Nagel</li>
+            <li onclick="showDetails(this)" id="li3" data-which-property="eckig">Würfel</li>
+        </ul>
+        <br/>
+        <div class="columns-box">
+            Mittels
+            <code>data-</code> ("Data Dash") kann einem Element eine maßgeschneiderte Eigenschaft (property) hinzugefügt werden. Auf diese
+            Weise lassen sich zusätzliche Informationen im HTML-Code hinterlegen - und auch wieder abfragen, beispielsweise
+            mit JavaScript.
+            <br/>
+            <br/> Das geht ganz leicht: JavaScript erlaubt uns, Attribute mittels
+            <code>getAttribute()</code> abzufragen. Für die
+            <code>data-</code> Attribute gibt es jedoch eine bessere Möglichkeit: Sie können mittels
+            <code>.dataset</code> abgefragt werden.
+            <br/>
+            <br/>Wirf doch einfach einen Blick in den Code, um zu sehen, wie einfach dieses Beispiel funktioniert!
+        </div>
+    </div>
+
+
+    <script>
+        /* data- kann mittels getAttribute() abgefragt werden... */
+        /*
+            function showDetails(thing) {
+              var thingProperty = thing.getAttribute("data-which-property");
+              thing.innerHTML = "Ein " + thing.innerHTML + " ist " + thingProperty + ".";
+            }
+        */
+
+        /* ...aber besser mit .dataset abfragen: */
+        function showDetails(thing) {
+            var thingProperty = thing.dataset.whichProperty;
+            thing.innerHTML = "Ein " + thing.innerHTML + " ist " + thingProperty + ".";
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nth-Pseudoklassen</title>
+    <style>
+        body{
+            padding-bottom: 5em;
+        }
+        .demo {
+            width: 200px;
+            height: 300px;
+            border: thick solid navy;
+            padding-left: 2em;
+        }
+
+        .inner {
+            width: 50px;
+            height: 50px;
+            background-color:fuchsia;
+        }
+
+        table {
+            border-collapse: collapse;
+            display: inline-block;
+        }
+
+        th,
+        td {
+            border: thin solid black;
+            padding: 0.3em;
+            text-align: center;
+        }
+
+        li:nth-child(odd) {
+            color: red;
+        }
+
+        li:nth-of-type(even) {
+            color: limegreen;
+        }
+
+        tr:nth-child(3n+2) {
+            background-color: cyan;
+        }
+
+        p:nth-of-type(odd) {
+            color: cyan;
+        }
+
+        p:nth-child(odd){
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+     <div class="demo">
+        <p>Das ist der erste Absatz.</p>
+        <p>Das ist der zweite Absatz.</p>
+        <div class="inner"></div>
+        <p>Das ist der dritte Absatz.</p>
+        <p>Das ist der vierte Absatz.</p>
+        <p>Das ist der fünfte Absatz.</p>
+        <p>Das ist der sechste Absatz.</p>
+    </div> 
+
+
+    <ul>
+        <li>Apfel</li>
+        <li>Banane</li>
+        <li>Kiwi</li>
+        <li>Mango</li>
+        <li>Mandarine</li>
+        <li>Birne</li>
+        <li>Pfirsich</li>
+        <li>Pflaume</li>
+    </ul>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Frucht</th>
+                <th>Farbe</th>
+                <th>Menge</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apfel</td>
+                <td>rot</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Banane</td>
+                <td>gelb</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Kiwi</td>
+                <td>grün</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Ananas</td>
+                <td>gelb</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Pfirsich</td>
+                <td>rosa</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Pflaume</td>
+                <td>lila</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Birne</td>
+                <td>grün</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Mango</td>
+                <td>gelb</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+ 
+   <table>
+
+        <tr>
+            <th>Frucht</th>
+            <th>Farbe</th>
+            <th>Menge</th>
+        </tr>
+
+        <tr>
+            <td>Apfel</td>
+            <td>rot</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Banane</td>
+            <td>gelb</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Kiwi</td>
+            <td>grün</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Ananas</td>
+            <td>gelb</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Pfirsich</td>
+            <td>rosa</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Pflaume</td>
+            <td>lila</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Birne</td>
+            <td>grün</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Mango</td>
+            <td>gelb</td>
+            <td>2</td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

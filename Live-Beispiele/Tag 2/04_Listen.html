@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        /* ul {
+            list-style-type: disc;
+        } */
+
+        .dropdown-list {
+            display: none;
+        }
+
+        .gallery:hover .dropdown-list {
+            display: block;
+        }
+    </style>
+    <title>Listen</title>
+</head>
+
+<body>
+
+    <h1>Ungeordnete Liste (unordered list)</h1>
+
+    <ul>
+        <!-- Listeneintrag (list item = li) -->
+        <li>Apfel</li>
+        <li>Birne</li>
+        <li>Banane</li>
+        <li>Mango</li>
+    </ul>
+
+    <ul>
+        <li>Home</li>
+        <li class="gallery">
+            Gallery
+
+            <ul class="dropdown-list">
+                <li>Holiday Pics</li>
+                <li>Favourite Pics</li>
+                <li>Company Pics</li>
+            </ul>
+
+        </li>
+        <li>About Us</li>
+        <li>Company</li>
+    </ul>
+
+
+    <h1>Geordnete Liste (ordered list)</h1>
+
+    <ol>
+        <li>Apfel</li>
+        <li>Birne</li>
+        <li>Banane</li>
+        <li>Mango</li>
+    </ol>
+
+    <ol type="A">
+        <li>Apfel</li>
+        <li>Birne</li>
+        <li>Banane</li>
+        <li>Mango</li>
+    </ol>
+
+    <ol type="a">
+        <li>Apfel</li>
+        <li>Birne</li>
+        <li>Banane</li>
+        <li>Mango</li>
+    </ol>
+
+    <ol type="I">
+        <li>Apfel</li>
+        <li>Birne</li>
+        <li>Banane</li>
+        <li>Mango</li>
+    </ol>
+
+    <ol type="i">
+        <li>Apfel</li>
+        <li>Birne</li>
+        <li>Banane</li>
+        <li>Mango</li>
+    </ol>
+
+    <h2>Steuerbare Listen</h2>
+
+    <ol reversed>
+        <li>Apfel</li>
+        <li>Birne</li>
+        <li>Banane</li>
+        <li>Mango</li>
+    </ol>
+
+    <ol>
+        <li value="300">Apfel</li>
+        <li>Birne</li>
+        <li>Banane</li>
+        <li>Mango</li>
+    </ol>
+
+    <ol reversed>
+        <li value="1">Apfel</li>
+        <li>Birne</li>
+        <li>Banane</li>
+        <li>Mango</li>
+    </ol>
+
+    <ol>
+        <li value="300">Apfel</li>
+        <li value="5">Birne</li>
+        <li value="97">Banane</li>
+        <li>Mango</li>
+    </ol>
+
+    <ol reversed>
+        <li value="300">Apfel</li>
+        <li value="5">Birne</li>
+        <li value="97">Banane</li>
+        <li>Mango</li>
+    </ol>
+
+    <h1>Description List</h1>
+
+    <dl>
+        <!-- definition term -->
+        <dt>Kaffee</dt>
+        <!-- definition description -->
+        <dd>Koffeinhaltiges Getränk</dd>
+        <dt>Tee</dt>
+        <dd>Aufgussgetränk</dd>
+    </dl>
+
+
+</body>
+
+</html>

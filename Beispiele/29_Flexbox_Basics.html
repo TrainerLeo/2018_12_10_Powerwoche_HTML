@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox</title>
+    <style>
+
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* body{
+
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+        } */
+
+        .flex-container{
+            margin: 2em auto;
+            width: 80%;
+            min-height: 300px;
+            display: flex;
+            background-color: rgb(181, 245, 224);
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; Die Elemente ordnen sich dann in umgekehrter Reihenfolge an. */
+            justify-content: center;
+            /* andere sinnvolle Möglichkeiten: 
+                space-between
+                center
+            */
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .flex-item{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(254, 128, 5);
+            border: medium solid black;
+            color: rgb(224, 250, 230);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+
+
+    </div>
+    
+</body>
+</html>

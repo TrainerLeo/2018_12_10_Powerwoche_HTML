@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Steuerbare Listen</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, sans-serif;
+            font-size: 16px;
+            color: #2f2f2f;
+        }
+
+        #wrapper {
+            width: 100%;
+            min-height: 100vh;
+            padding: 3em 1em;
+            background-color: #fefefe;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 1rem;
+            margin-left: 0.7rem;
+            color: #1f1f1f;
+        }
+
+        .flex-container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .flex-item {
+            border: medium solid black;
+            border-radius: 1em;
+            margin: 0.5em;
+            padding: 1em;
+            width: 14em;
+            background-color: rgb(242, 242, 250);
+        }
+
+
+        .list-container {
+            border: 1px solid limegreen;
+            border-radius: 0.5em;
+            padding: 0.5em;
+            font-size: 1em;
+            background-color: rgb(251, 251, 253);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Beispiele:
+         type=I/i, A/a
+         reversed
+         li value
+    -->
+    <div id="wrapper">
+        <h1>Steuerbare Listen</h1>
+        <div class="flex-container">
+            <div class="flex-item">
+                <div class="list-container">
+                    <!-- ol-Übungen einfügen: -->
+
+                    <ol type="I" reversed>
+                        <li>Apfel</li>
+                        <li>Banane</li>
+                        <li>Kiwi</li>
+                        <li>Mango</li>
+                    </ol>                    
+                </div>
+            </div>
+            <!-- .flex-item end -->
+
+
+
+
+        </div>
+        <!-- .flex-container end -->
+    </div>
+    <!-- #wrapper end -->
+</body>
+
+</html>

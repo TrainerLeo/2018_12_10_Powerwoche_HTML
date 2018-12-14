@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Farben</title>
+    <style>
+        /* body{
+            background-color: red;
+        } */
+        div {
+            width: 200px;
+            height: 150px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+            font-size: 3em;
+        }
+
+        #demo01 {
+            background-color: yellowgreen;
+        }
+
+        #demo02 {
+            background-color: rgb(154, 205, 50);
+        }
+
+        #demo03 {
+            background-color: #9acd32;
+        }
+
+        #demo04 {
+            background-color: hsl(80, 61%, 50%);
+        }
+
+        #demo05 {
+            background-color: rgba(153, 205, 50, 0.3);
+        }
+
+        #demo06 {
+            background-color: yellowgreen;
+            /* color: white; */
+            opacity: 0.4;
+        }
+
+        #demo06:hover #demo07{
+            display: block;
+        }
+        #demo07 {
+            display: none;
+        }
+
+        #demo08 {
+            visibility: hidden;
+        }
+
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(67, 82, 167);
+            color: lightskyblue;
+        }
+
+        .main-nav{
+            height: 40px;
+        }
+
+        .main-nav::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .main-nav>li{
+            float: left;
+            padding: 5px 10px;
+            box-sizing: border-box;
+            line-height: 40px;
+            position: relative;
+        }
+
+        .dropdown{
+            display: none;
+            position: absolute;
+            top: 40px;
+            width: 100px;
+            background-color: lightskyblue;
+            color: rgb(67, 82, 167);
+        }
+
+        .dropdown>li{
+            padding: 5px 10px;
+        }
+
+        .main-nav>li:hover .dropdown{
+            display: block;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <nav>
+        <ul class="main-nav">
+            <li>Home</li>
+            <li>Gallery
+                <ul class="dropdown">
+                    <li>Test1</li>
+                    <li>Test2</li>
+                </ul>
+            </li>
+            <li>Links</li>
+        </ul>
+    </nav>
+    <div id="demo01">01</div>
+    <div id="demo02">02</div>
+    <div id="demo03">03</div>
+    <div id="demo04">04</div>
+    <div id="demo05">05</div>
+    <div id="demo06">06</div>
+    <div id="demo07">07</div>
+    <div id="demo08">08</div>
+
+
+    <!-- <script>
+        $(function(){
+            $('#demo06').hover(function(){
+                $('#demo07').toggle();
+            });
+        });
+    </script> -->
+</body>
+
+</html>

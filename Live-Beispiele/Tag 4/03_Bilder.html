@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bilder</title>
+    <style>
+        .img-container {
+            border: 4px solid red;
+            width: 400px;
+            height: 400px;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="img-container">
+        <img src="../../images/bild_klein.jpg" alt="Seemöwe">
+    </div>
+
+    <picture>
+        <source srcset="../../images/bild_groß.jpg" media="(min-width: 1200px)">
+        <source srcset="../../images/bild_mittel.jpg" media="(min-width: 900px)">
+        <source srcset="../../images/bild_klein.jpg" media="(min-width: 600px)">
+        <img src="../../images/bild_klein.jpg" alt="Seemöwe">
+    </picture>
+
+
+    
+</body>
+
+</html>

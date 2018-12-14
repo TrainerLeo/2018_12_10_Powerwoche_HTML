@@ -1,0 +1,86 @@
+body{
+    font-family: Dosis, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Typselektoren */
+
+p{
+   /* tolles Styling */ 
+}
+
+/* Klassenselektoren */
+.my-great-class{
+    color: red;
+}
+
+/* ID-Selektor */
+#green{
+    color: green;
+}
+
+td, th{
+    /* tolles Styling für td UND th*/
+}
+
+/* Kombinatoren */
+
+/* Nachfahren-Kombinator (descendant combinator) */
+
+div span{
+    color: blue;
+}
+
+/* #container .my-class{} */
+
+/* Kind-Kombinator (child combinator) */
+
+div>span{
+    font-style: italic;
+}
+
+/* Benachbarter Geschwister Kombinator (adjacent sibling combinator) */
+
+h1+p{
+    font-size: 24px;
+}
+
+/* Allgemeiner Geschwister Kombinator (general sibling combinator) */
+
+h1~p{
+    text-decoration: underline;
+}
+
+/* Attributselektoren */
+
+a[target]{
+    /* tolles Styling für alle externen Links */
+}
+
+/* bestimmter Wert muss zugeordnet sein */
+div[lang="de"]{
+    /* tolles Styling für alle divs mit lang="de" */
+}
+
+/* Wert muss mit einer bestimmten Zeichenfolge beginnen */
+div[id^="shadow"]{
+    /* Styling für alle Divs, deren ID mit "shadow" beginnt */
+}
+
+/* ...mit bestimmter Zeichenfolge endet */
+div[id$="xyz"]{
+    /* Styling für alle Divs, deren ID mit "xyz" endet */
+}
+
+/* ...muss bestimmte Zeichenfolge enthalten */
+div[id*="xyz"]{}
+
+/* ...muss bestimmtes Wort enthalten */
+div[id~="word"]{}
+
+/* 
+a[href*="google"]{
+    text-decoration: none;
+    color: chartreuse;
+} 
+*/
+

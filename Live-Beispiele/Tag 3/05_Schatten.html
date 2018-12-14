@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Schatten</title>
+    <style>
+
+        .container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        div[id^="demo"]{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            float: left;
+            margin: 20px;
+            font-size: 3em;
+        }
+
+
+        #demo01{
+            box-shadow: 5px 5px;
+        }
+
+        /* 3. Wert: "Blur-Radius" */
+        #demo02{
+            box-shadow: 5px 5px 7px;
+        }
+
+        #demo03{
+            box-shadow: 5px 5px 7px 10px;
+        }
+
+        #demo04{
+            border-color: aqua;
+            box-shadow: 0px 0px 10px;
+        }
+
+        #demo05{
+            box-shadow: 5px 5px 7px chartreuse;
+        }
+
+        #demo06{
+            box-shadow: 5px 5px 7px chartreuse, 7px 7px 10px firebrick;
+        }
+
+        #demo07{
+            box-shadow: 5px 5px 7px rgba(31, 30, 30, 0.8), 7px 7px 10px rgba(97, 97, 97, 0.6);
+        }
+
+        #demo08{
+            text-shadow: 2px 2px rgba(97, 97, 97, 0.6);
+        }
+
+        #demo09:hover{
+            box-shadow: 0px 0px 10px rgba(31, 30, 30, 0.8), 0px 0px 15px rgba(97, 97, 97, 0.6);
+        }
+
+        #demo10{
+            border-top: 2px solid chartreuse;
+            border-right: 4px dotted aquamarine;
+            border-bottom: 1px dashed red;
+            border-left: none;
+
+            box-shadow: -5px -5px 7px rgba(31, 30, 30, 0.8);
+        }
+
+        #demo11{
+            border-top-left-radius: 20px;
+            border-top-right-radius: 40%;
+            border-bottom-right-radius: 5em;
+            border-bottom-left-radius: 7px;
+        }
+
+        #demo12{
+            /* border-top-right-radius: 98%;
+            border-bottom-left-radius: 98%; */
+            border-radius: 50%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        #demo13{
+            width: 300px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="demo01">01</div>
+        <div id="demo02">02</div>
+        <div id="demo03">03</div>
+        <div id="demo04">04</div>
+        <div id="demo05">05</div>
+        <div id="demo06">06</div>
+        <div id="demo07">07</div>
+        <div id="demo08">08</div>
+        <div id="demo09">09</div>
+
+        <!-- Border -->
+
+        <div id="demo10">10</div>
+        <div id="demo11">11</div>
+        <div id="demo12">12</div>
+        <div id="demo13"></div>
+    </div>
+</body>
+</html>

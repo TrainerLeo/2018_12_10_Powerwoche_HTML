@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Textarea und Datalist</title>
+
+    <!-- <script src="http://fred-wang.github.io/mathml.css/mspace.js"></script> -->
+    <style>
+        body {
+            margin: 0;
+            padding: 3em;
+            font-family: Georgia, serif;
+        }
+
+        #content-box {
+            background-color: #f3f3f3;
+            padding: 2em;
+            width: 90%;
+            box-shadow: 0.4em 0.4em 0.6em rgba(0, 128, 0, 0.4), 0.2em 0.2em 0.4em rgba(0, 128, 0, 0.7);
+        }
+
+        .text-box {
+            border: 1px solid green;
+            padding: 2em;
+            display: flex;
+            align-items: center;
+            margin: 2em 1em 1em 0;
+        }
+
+        .text-box>p{
+            width: 50%;
+            margin-left: 2em;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="content-box">
+        <div class="text-box">
+            <textarea name="textdemo" id="demo1" cols="30" rows="10" placeholder="Geben Sie hier Ihren Text ein."></textarea>
+
+            <p>
+                Hier wird das Textarea-Feld mittels JavaScript vorselektiert. Das kann aber auch mittels autofocus-Attribut erreicht werden.
+            </p>
+        </div>
+        <div class="text-box">
+
+            <form>
+                <fieldset>
+                    <legend>Pizza-Extras</legend>
+                    <input list="extras" name="Pizzabelag" autocomplete="on">
+                    <datalist id="extras">
+                        <!-- beachte die unterschiedlichen Einträge der datalist, nach denen gesucht werden kann: -->
+                        <option value="Mozzarella" label="Käse">
+                        <option value="Pfefferoni">scharf</option>
+                        <option>Paprika</option>
+                        <option value="Mais">
+                        <option value="Dolce Latte" label="Käse">
+                    </datalist>
+                    <input type="submit">
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        /* Die JS-Funktion focus() kann dafür verwendet werden, dass ein Element beim Laden der Seite bereits den Fokus bekommt. */
+        window.onload = function () {
+            document.getElementById("demo1").focus();
+        };
+
+    </script>
+</body>
+
+</html>

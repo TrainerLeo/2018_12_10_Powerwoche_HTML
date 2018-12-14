@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudoelemente</title>
+    <style>
+        /* Pseudoelemente */
+        .demo01::first-letter {
+            font-family: Parchment;
+            font-size: 42px;
+        }
+
+        .demo02::first-line{
+            font-weight: bold;
+        }
+
+        ::after{}
+        ::before{}
+
+        /* ------------------------ */
+
+
+        /* Pseudoklassen */
+
+        a:hover{
+           color: chartreuse; 
+        }
+
+        a:active{
+            color: red;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <p class="demo01">Das ist ein Paragraph.</p>
+    <p>Das ist ein <a href="#">Paragraph.</a></p>
+    <p>Das ist ein Paragraph.</p>
+    <p>Das ist ein Paragraph.</p>
+    <p>Das ist ein Paragraph.</p>
+    <p class="demo01">Das ist ein Paragraph.</p>
+    <p>Das ist ein Paragraph.</p>
+    <p>Das ist ein Paragraph.</p>
+    <p>Das ist ein Paragraph.</p>
+    <p class="demo02">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit nam similique ex officia quos laudantium
+        facere aut. Voluptate harum, error dicta obcaecati est, quibusdam quidem fugiat ab excepturi ex cupiditate
+        accusamus ratione enim beatae tempora vel unde blanditiis nesciunt minima adipisci. Eius dignissimos,
+        recusandae magni molestias ullam, minus aut temporibus voluptatum beatae eos cumque. Rerum, placeat accusamus.
+        Itaque quo ullam blanditiis laboriosam vitae nemo veniam soluta placeat quibusdam non rem officia aliquid
+        voluptatum ea reiciendis quis quia hic, nisi asperiores odit assumenda magnam eum repellat optio! Quod
+        reprehenderit amet suscipit perferendis. Dolor error itaque excepturi blanditiis et consequatur ipsum? Nostrum
+        magnam nihil blanditiis a nisi architecto. Sapiente perspiciatis molestiae in deserunt suscipit fugit, nemo
+        culpa rerum, tenetur harum optio aut animi dolorum eos fugiat mollitia! Impedit ipsum officiis modi eaque
+        magnam, praesentium reiciendis atque facere soluta voluptate deleniti alias cupiditate deserunt accusantium
+        sapiente iste ab aspernatur sunt provident doloremque quasi earum temporibus minima. Incidunt, dicta autem nemo
+        ea, cum itaque quod dolor ipsum dolores quas perspiciatis facere fugit maiores corporis sequi? Numquam
+        molestiae, beatae, inventore eos totam hic adipisci deleniti eligendi pariatur reiciendis fugiat est
+        accusantium, architecto tenetur iste commodi maxime ratione quae? Dolore magni facere explicabo hic sapiente
+        ex.</p>
+</body>
+
+</html>

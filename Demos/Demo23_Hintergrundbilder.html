@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hintergrundbilder</title>
+
+    <!--
+        Hintergrundbilder im images-Ordner:
+        Eule: ../images/bg_eule.jpg
+        Muster: ../images/bg_muster1.jpg
+                ../images/bg_muster2.jpg
+                ../images/bg_muster3.jpg
+    -->
+    <!--
+        Überlappende Hintergrundbilder:
+        background: 
+        url(bsp1.png) 600px 100px no-repeat,
+        url(bsp2.png) no-repeat,
+        url(bsp3.png);
+
+    -->
+    <style>
+        body {
+
+            background-image: url(../images/bg_muster3.jpg);
+
+            /* 
+               background-repeat:
+               repeat: wiederholt, bis alles ausgefüllt ist
+               space: wiederholt, Abstände dazwischen, Bild wird nicht abgeschnitten
+               round: wiederholt, resize, damit sich die Bilder genau ausgehen
+            */
+
+            
+
+            /* 
+               background-size:
+               auto: Bild in Originalgröße
+               contain: Bild versucht Hintergrund zu füllen, behält Seitenverhältnis bei
+               cover: Füllt Hintergrund ohne Rücksicht auf Seitenverhältnis
+               size + Größenangabe
+            */
+
+        
+
+            /* Fallback background-color setzen, für den Fall, dass aus irgendeinem Grund das Bild nicht angezeigt werden kann! */
+            /* background-color: aliceblue; */
+
+            background-color: aliceblue;
+        }
+
+        .text {
+            width: 300px;
+            background-color: aliceblue;
+        }
+
+        
+    </style>
+</head>
+    <div class="demo"></div>
+
+<body>
+
+</body>
+
+</html>

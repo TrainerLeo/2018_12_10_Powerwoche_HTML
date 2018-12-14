@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>HamburgerMenu</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="companyname">
+            <p>MyGreatCompany</p>
+
+        </div>
+        <nav>
+            <svg id="hamburger-menu" width="20" height="15" onclick="dropdown();">
+                <rect width="20" height="3" fill="floralwhite"></rect>
+                <rect x="0" y="6" width="20" height="3" fill="floralwhite"></rect>
+                <rect x="0" y="12" width="20" height="3" fill="floralwhite"></rect>
+            </svg>
+            <ul id="dropdown">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Company</a>
+                </li>
+                <li>
+                    <a href="#">Products</a>
+                </li>
+                <li>
+                    <a href="#">Gallery</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content-container">
+            <div id="content-box">
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quibusdam molestiae aperiam aspernatur
+                    nobis, sunt quos quo cum quisquam soluta tempore maxime culpa laudantium dolores non consequatur facilis
+                    facere mollitia excepturi cupiditate ipsum saepe! Vitae architecto autem qui officia facilis ipsum ducimus
+                    veritatis temporibus corporis saepe hic nam dolore illo, deleniti provident libero accusamus. Cum, doloribus
+                    commodi perspiciatis hic placeat quae odio quos. Porro, repellendus rem. Perspiciatis quisquam a nemo
+                    sunt dicta quidem reprehenderit accusamus asperiores rem esse totam sequi, possimus eum tempora corrupti
+                    suscipit laborum unde, recusandae commodi at perferendis. Unde, nemo! Expedita perferendis doloremque,
+                    voluptas tempora voluptates eveniet.
+                </article>
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere laudantium quidem, rem dolores ex earum corporis?
+                    Aliquid, maiores. Minus ipsam dolore necessitatibus in debitis nesciunt est, veniam ipsa quis delectus!
+                    Necessitatibus, sed ratione facilis eos commodi blanditiis, minima impedit at architecto molestiae, vel
+                    officiis ullam laudantium illum tempore totam iste provident animi tenetur. Dolor laudantium, facere
+                    accusamus quisquam corporis voluptatibus dolorum quia provident excepturi assumenda magnam similique
+                    quidem! Id ipsam quam omnis quod voluptate reprehenderit aspernatur ea, porro cum. Doloremque consequatur
+                    quos doloribus, impedit cumque tenetur eos aliquam similique inventore, dolorum obcaecati nesciunt ea,
+                    pariatur iste provident quibusdam recusandae facilis reiciendis ipsa autem deserunt! Adipisci consequatur
+                    deserunt, neque placeat porro quis. Quam consectetur enim dignissimos ab eum, omnis error natus!
+                </article>
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate cumque perspiciatis delectus iure libero
+                    soluta culpa odit dolores placeat eum, exercitationem esse pariatur, facilis molestiae! Mollitia incidunt
+                    expedita voluptas fugiat esse quidem qui tempore nam! Possimus tempora, quod qui blanditiis obcaecati
+                    beatae ex repellendus, veritatis sunt delectus rem iure neque.
+                </article>
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque minima voluptate similique quas quo laborum
+                    ipsam dolor odit animi dolorum vitae quisquam laudantium veniam praesentium earum, nihil, perspiciatis
+                    saepe, dolore deleniti ea. Doloremque dolor natus praesentium harum ipsa odit ex est obcaecati. Iusto
+                    assumenda suscipit autem, corporis, molestias debitis reiciendis, in quidem quas vero dicta id voluptatibus
+                    dolore amet similique sed repellendus ut fugit et dolorem velit nostrum? Harum, in. Explicabo eveniet
+                    illum doloremque, voluptate necessitatibus reprehenderit minima dolores cumque delectus, modi porro!
+                    Quibusdam eum doloremque, voluptatem recusandae esse totam enim sed, possimus ratione vel sint maxime,
+                    laborum dolorum illum?
+                </article>
+            </div>
+            <div id="img-container">
+                <img src="images/lake.jpg" alt="See">
+                <img src="images/sea.jpg" alt="Meer">
+                <img src="images/canyon.jpg" alt="Canyon">
+                <img src="images/san-francisco.jpg" alt="San Francisco">
+                <div class="clearboth"></div>
+            </div>
+        </div>
+        <!-- content-container end -->
+        <footer>
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+        </footer>
+    </div>
+    <!-- wrapper end -->
+    <script>
+        function dropdown() {
+            var dropdown = document.getElementById('dropdown');
+
+            if (dropdown.className === "dropdown") {
+                dropdown.className = "";
+            } else {
+                dropdown.className = "dropdown";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

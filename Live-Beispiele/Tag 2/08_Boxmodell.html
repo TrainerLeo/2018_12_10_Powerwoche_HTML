@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxmodell</title>
+    <style>
+        #btn-ok {
+            margin-right: 25px;
+        }
+
+        #btn-start {
+            margin-left: 25px;
+        }
+
+        #container-1,
+        #container-2 {
+            display: inline-block;
+            width: fit-content;
+            background-color: aqua;
+        }
+
+        #container-1 {
+            padding-right: 25px;
+        }
+
+        #container-2 {
+            padding-left: 25px;
+        }
+
+        #demo01,
+        #demo02,
+        #demo03,
+        #demo04,
+        #demo05,
+        #demo06 {
+            width: 150px;
+            height: 150px;
+
+        }
+
+        #demo01 {
+            background-color: aqua;
+        }
+
+        #demo02 {
+            background-color: brown;
+            padding: 20px;
+        }
+
+        #demo03 {
+            background-color: brown;
+            padding: 20px;
+            border: 10px solid chartreuse;
+        }
+
+        #demo04 {
+            background-color: brown;
+            padding: 20px;
+            border: 10px solid chartreuse;
+            box-sizing: border-box;
+        }
+
+        #demo05 {
+            background-color: chartreuse;
+        }
+
+        #demo06 {
+            background-color: brown;
+            padding: 20px;
+            border: 10px solid blueviolet;
+            box-sizing: border-box;
+        }
+
+        #demo07 {
+            width: 100%;
+            height: 100%;
+            background-color: chartreuse;
+        }
+
+        #text-demo{
+            width: 50%;
+            /* height: 100px; */
+            border: 2px solid red;
+            overflow: auto;
+            hyphens: auto;
+            font-size: 28px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn-ok">OK</button><button id="btn-start">Start</button>
+
+    <div>
+        <div id="container-1">
+            <button id="btn-3">OK</button>
+
+        </div>
+        <div id="container-2">
+            <button id="btn-4">Start</button>
+        </div>
+    </div>
+
+    <div id="demo01">1</div>
+    <div id="demo02">2</div>
+    <div id="demo03">3</div>
+    <div id="demo04">4</div>
+    <div id="demo05">5</div>
+    <div id="demo06">
+        <div id="demo07"></div>
+    </div>
+    <div id="text-demo">
+        Donau&shy;dampf&shy;schiff&shy;fahrts&shy;ge&shy;sell&shy;schaft
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rerum aperiam ea non reprehenderit
+        architecto in doloremque explicabo commodi neque quam illo natus et distinctio quidem aliquid officia
+        recusandae excepturi! Delectus ipsum error repellat, voluptas officia, sed tempora doloribus sint nobis
+        obcaecati itaque blanditiis ea atque? Explicabo soluta quia necessitatibus a sed dolore minus nam quibusdam,
+        qui animi. Architecto necessitatibus neque at. Asperiores eligendi repellat commodi quaerat exercitationem
+        blanditiis repudiandae deleniti repellendus culpa similique nesciunt ipsa laudantium quidem officiis molestiae
+        dolore quasi laboriosam nihil doloribus, fugit nam! A rerum laborum, libero quia ducimus similique recusandae?
+        Iure, itaque. Error, accusamus labore!
+    </div>
+</body>
+
+</html>

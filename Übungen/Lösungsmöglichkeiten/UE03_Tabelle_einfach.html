@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Table</title>
+    <style>
+        table {
+            border-collapse: collapse; /* Sorgt dafür, dass kein doppelter Rahmen entsteht. */
+            margin: 3em;
+        }
+
+        /* caption ist eine Tabellenüberschrift. Per Default steht sie mittig ohne Rahmen über der Tabelle. */
+        caption {
+            font-size: 1.5em;
+            margin-bottom: .3em;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            min-width: 100px;
+            padding: 0.3em;
+        }
+
+        td {
+            text-align: center; /* Per Default ordnet sich der Text innerhalb von td links an. */
+        }
+
+        /* caption{
+            border: 1px solid black;
+        } */
+
+        tr:nth-child(even) {
+            background-color: rgb(223, 248, 248);
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(244, 250, 250);
+        }
+
+        /* Auch das erste oder letzte Element kann ganz gezielt angesprochen werden: */
+        thead>tr:first-child {
+            background-color: rgb(89, 167, 167);
+            color: white;
+        }
+        tr:last-child{
+            color: orange;
+        }
+
+        tr:hover{
+            color: firebrick;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <caption>Autos</caption>
+        <thead>
+            <tr>
+                <th>Marke</th>
+                <th>Typ</th>
+                <th>Farbe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kia</td>
+                <td>Sportage</td>
+                <td>rot</td>
+            </tr>
+            <tr>
+                <td>Hyundai</td>
+                <td>ix35</td>
+                <td>weiß</td>
+            </tr>
+            <tr>
+                <td>Opel</td>
+                <td>Mocca</td>
+                <td>braun</td>
+            </tr>
+            <tr>
+                <td>Toyota</td>
+                <td>RAV4</td>
+                <td>grün</td>
+            </tr>
+            <tr>
+                <td>Dacia</td>
+                <td>Duster</td>
+                <td>schwarz</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

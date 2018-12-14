@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+}
+
+#page-container{
+    background-color: dodgerblue;
+    min-height: 100vh;
+}
+
+#comp-name-container{
+    background-color: darkorange;
+    height: 120px;
+}
+
+#main-nav-container{
+    background-color: gold;
+}
+
+.main-nav{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.main-nav>li{
+    display: inline-block;
+}
+
+.main-nav a{
+    text-decoration: none;
+    color: brown;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    padding: 10px 20px;
+    display: inline-block;
+
+    /* background-color: aqua; */
+}
+
+.main-nav a:hover{
+    color: gold;
+    background-color: brown;
+}

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- von w3s -->
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            margin-bottom: 50px;
+            padding: 1em;
+            background-color: #FFDAB9;
+        }
+
+        /* DEMO: unschöner Margin! Ändern! (Übungsaufgabe)*/
+
+        header a {
+            text-decoration: none;
+            font-family: "Arial Black", sans-serif;
+            color: rgb(33, 154, 170);
+        }
+
+        header a:hover {
+            color: azure;
+            font-family: "Arial Black", sans-serif;
+            text-shadow: 1px 1px 7px rgb(5, 65, 73);
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 1em;
+            background-color: #9FB6CD;
+        }
+
+        /* Items gleichmäßig anordnen: justify-content: center/space-around/... */
+
+        .navbuttons {
+            width: 350px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .vid {
+            background-color: #CAFF70;
+            padding: 1rem;
+            margin: .3em .5em;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        #foot {
+            padding: 1em;
+            background-color: thistle;
+        }
+
+
+        /*Beispiel für Hintergrund-Image 
+         body{background-image: url("../Pics/bgtest01.jpg"); background-repeat:space;}
+       */
+
+        /* Beispiel für Hintergrund-Image + Background-Color
+            body{background-image: url("../Pics/bgtest02.jpg"); background-repeat: repeat-y; 
+            background-color: lightgoldenrodyellow;}
+        */
+
+        /* Beispiel für Hintergrund-Gradient 
+            body{background: radial-gradient(yellow, green); background-attachment: fixed; height: 100%;}
+        */
+
+        /* Beispiel für Button-Styling*/
+        button{background-color: azure; color: rgb(33, 154, 170);; font-family: "Bradley Hand ITC", "Calibri", sans-serif;
+               border-radius: 7px;}
+        button:hover{background-color:rgb(33, 154, 170);; color:azure; cursor: pointer; box-shadow:3px 3px 10px gray;}
+        
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Big Buck Bunny</h1>
+        <h3>Creative Commons Video</h3>
+        <h4>Mehr über
+            <a href="https://peach.blender.org/" target="_blank">Big Buck Bunny</a>
+        </h4>
+    </header>
+    <div id="container">
+        <div class="vid">
+            <video width="350px" controls>
+                <source src="../media/BigBuckBunny.mp4" type="video/mp4" />
+                <!-- der Browser nimmt das erste Format, das er kennt -->
+                <source src="../media/BigBuckBunny.ogg" type="video/ogg" /> Ihr Browser unterstützt kein HTML5 video.
+                <!-- Text innerhalb des video-Tags wird nur angezeigt, wenn der Browser dieses Tag nicht kennt -->
+            </video>
+        </div>
+        <div class="vid">
+            <video id="video1" width="350px">
+                <source src="../media/BigBuckBunny.mp4" type="video/mp4" />
+                <source src="../media/BigBuckBunny.ogg" type="video/ogg" /> Ihr Browser unterstützt kein HTML5 video.
+            </video>
+            <!-- eigenen Fortschrittsbalken erstellen -->
+            <progress id="videoProgress" value="0" max="100" style="width: 350px; height:0.5em; margin: 2px 0;"></progress>
+            <!-- eigene Play- (und andere) Buttons erstellen -->
+            <div class="navbuttons">
+                <button onclick="playPause()">Play/Pause</button>
+                <button onclick="makeSmall()">Small</button>
+                <button onclick="makeNormal()">Normal</button>
+                <button onclick="makeBig()">Big</button>
+                <button onclick="makeFullscreen()">Fullscreen</button>
+                <button onclick="mute()">Mute</button>
+            </div>
+
+        </div>
+        <div class="vid">
+            <iframe width="350" height="197" src="https://www.youtube.com/embed/vA3gMmN9s8M"  allowfullscreen></iframe>
+        </div>
+
+
+    </div>
+    <footer id="foot">
+
+    </footer>
+
+
+
+    <script>
+        // BUTTONS ---------------------------------------------------------------------
+        var myVideo = document.getElementById("video1");
+
+        function playPause() {
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+        }
+
+        function makeSmall() {
+            myVideo.width = 150;
+        }
+
+        function makeNormal() {
+            myVideo.width = 350;
+        }
+
+        function makeBig() {
+            myVideo.width = 560;
+        }
+
+        function makeFullscreen() {
+            if (myVideo.requestFullscreen) {
+                myVideo.requestFullscreen();
+            } else if (myVideo.mozRequestFullScreen) {
+                myVideo.mozRequestFullScreen();
+            } else if (myVideo.webkitRequestFullscreen) {
+                myVideo.webkitRequestFullscreen();
+            }
+        }
+
+        function mute() {
+            video.muted = !video.muted;
+        }
+
+        // PROGRESS BAR ------------------------------------------------------------
+        var video = document.getElementById("video1");
+        var videoProgress = document.getElementById("videoProgress");
+
+        video.addEventListener("timeupdate", function () {
+
+            videoProgress.value = 100 * video.currentTime / video.duration;
+
+        });
+
+
+        // Was soll im FOOTER drinstehen:
+        var date = new Date().getFullYear(); // heutiges Datum, davon will ich aber nur das Jahr anzeigen("getFullYear"):
+        document.getElementById('foot').innerHTML = "&copy; " + date + " HTML5 & CSS3 Einstieg";
+
+    </script>
+
+</body>
+
+</html>

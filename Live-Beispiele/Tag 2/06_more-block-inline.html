@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Block und Inline</title>
+    <style>
+        /* div{
+            border: 2px solid green;
+        } */
+        .lbl-inp-container{
+            margin-bottom: 10px;
+        }
+        
+        .inline{
+            width: 100px; /* funktioniert NICHT mit display: inline!!!!! */
+            display: inline;
+            background-color: aqua;
+        }
+
+        .block{
+            width: 100px;
+            display: block;
+            background-color: aqua;
+        }
+
+        .inline-block{
+            width: 85px;
+            display: inline-block;
+            /* background-color: aqua; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Inline-Darstellung</h1>
+    <div class="lbl-inp-container">
+        <label class="inline">Vorname:</label>
+        <input type="text">
+    </div>
+    <div class="lbl-inp-container">
+        <label class="inline">Nachname:</label>
+        <input type="text">
+    </div>
+    <div class="lbl-inp-container">
+        <label class="inline">Passwort:</label>
+        <input type="text">
+    </div>
+
+    <h1>Block-Darstellung</h1>
+    <div class="lbl-inp-container">
+        <label class="block">Vorname:</label>
+        <input type="text">
+    </div>
+    <div class="lbl-inp-container">
+        <label class="block">Nachname:</label>
+        <input type="text">
+    </div>
+    <div class="lbl-inp-container">
+        <label class="block">Passwort:</label>
+        <input type="text">
+    </div>
+
+    <h1>Inline-Block-Darstellung</h1>
+    <div class="lbl-inp-container">
+        <label class="inline-block">Vorname:</label>
+        <input type="text">
+    </div>
+    <div class="lbl-inp-container">
+        <label class="inline-block">Nachname:</label>
+        <input type="text">
+    </div>
+    <div class="lbl-inp-container">
+        <label class="inline-block">Passwort:</label>
+        <input type="text">
+    </div>
+</body>
+
+</html>

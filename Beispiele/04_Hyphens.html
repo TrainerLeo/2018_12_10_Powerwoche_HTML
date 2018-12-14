@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Hyphens</title>
+    <style>
+        body {
+            padding: 3em;
+            font-size: 16px;
+        }
+
+        #test {
+            width: 150px;
+            /* text-align: justify; */
+            font-size: 1vw;
+            border: thin solid red;
+            padding: 5px;
+            -moz-hyphens: auto;
+            -o-hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+            /* HYPHENS - Möglichkeiten:
+   auto = sucht sich selbst aus, wo getrennt werden soll und fügt
+          Trennstrich hinzu;
+   none = getrennt wird nicht. Egal, wie lang das Wort ist; es schaut über die
+          Box hinaus;
+   manual = es wird dort getrennt, wo ich es mit &shy; erlaubt habe, nirgends sonst.
+
+   ACHTUNG: hyphens funktionieren derzeit noch nicht in allen Browsern!!!
+*/
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Mit &shy; kann man angeben, wo eine Silbentrennung möglich bzw. notfalls
+    erwünscht wäre; außerdem macht &shy; auch einen Bindestrich, wo getrennt wird. -->
+    <!-- andernfalls kann man auch mit <wbr> abtrennen, wo nötig -->
+
+    <div id="test">
+        Donau&shy;dampf&shy;schiff&shy;fahrts&shy;ge&shy;sell&shy;schaft 
+        Donau<wbr>dampf<wbr>schiff<wbr>fahrts<wbr>ge<wbr>sell<wbr>schaft
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia nihil, quis delectus qui aperiam blanditiis, cum esse error
+        fugiat quidem ex ipsam doloribus ut dignissimos voluptatem. Error quo magnam veniam unde sint, soluta animi molestias
+        possimus architecto, culpa adipisci reprehenderit corporis quod dolor explicabo totam vero tempore doloremque dolore
+        quos tenetur accusamus aperiam aliquid! Magnam officiis atque cum, voluptas error aperiam, facere autem omnis porro
+        beatae exercitationem distinctio. Quos voluptatibus omnis officia excepturi voluptatem repellendus consectetur, culpa
+        nemo et quae, nihil aliquid a assumenda! Vero aspernatur error aliquid dicta consequuntur nulla, cupiditate fugiat
+        quia illo ea deserunt eius blanditiis expedita ad odio adipisci amet? Labore modi commodi consequatur possimus dolorem
+        maiores! Doloribus modi aspernatur aliquam ipsam impedit ullam eius debitis quasi possimus non voluptatem dolorum,
+        itaque quibusdam? Obcaecati aut, eius exercitationem illum veritatis quisquam, repellat magni, quam quo accusantium
+        corrupti! Repellat architecto praesentium numquam officiis nemo quia, excepturi, voluptas facere molestias odit neque,
+        minus quasi! Adipisci repudiandae similique culpa. Obcaecati vel quo ullam? Saepe voluptatibus dicta delectus eaque
+        veniam. Sit officia alias deserunt ratione. Facere cupiditate magni voluptatibus expedita ducimus tenetur, iusto,
+        odit reiciendis dolores unde deleniti quam soluta atque dolore minima error sed temporibus ut! Culpa quam voluptatum
+        odio.
+    </div>
+</body>
+
+</html>

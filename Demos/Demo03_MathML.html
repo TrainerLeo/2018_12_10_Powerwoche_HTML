@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>MathML</title>
+    
+    <script src="http://fred-wang.github.io/mathml.css/mspace.js"></script>
+    <style>
+        body {
+            padding: 3em;
+            font-family: Georgia, serif;
+            background: linear-gradient(#f3f3f3 25%, #e9f3eb, #d7f0dc, #c4eccc 90%, green);
+            background-attachment: fixed;
+        }
+
+        #content-box {
+            background-color: #f3f3f3;
+            padding: 2em;
+            width: 70%;
+            box-shadow: 0.4em 0.4em 0.6em rgba(0, 128, 0, 0.4), 0.2em 0.2em 0.4em rgba(0, 128, 0, 0.7);
+        }
+
+        .text-box {
+            margin-top: 1em;
+        }
+
+        .math-box {
+            border: 1px solid green;
+            padding: 2em;
+            display: flex;
+            align-items: center;
+            margin: 2em 1em 1em 0;
+        }
+
+        .math-box-container {
+            display: flex;
+        }
+
+        .math-box-container>.text-box {
+            color: green;
+        }
+
+        a{
+            text-decoration: none;
+            color: green;
+            font-weight: bold;
+            font-family: 'Garamond', serif;
+            font-size: 1.1em;
+        }
+
+        a:hover{
+            text-shadow: 0.1em 0.1em 0.3em rgba(0, 128, 0, 0.7);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="content-box">
+        <h1>Mathematical Markup Language (Math ML)</h1>
+        <p>Mathematische Formeln auf Webseiten</p>
+
+        <br/>
+        <div class="text-box">
+            Früher war es üblich, wollte man eine mathematische Formel auf einer Webseite korrekt darstellen, diese als Bild einzufügen.
+            MathML sollte dem Abhilfe schaffen. Durch diese Markup-Language lassen sich nun auch mathematische Formeln und
+            Gleichungen in HTML-Dokumente einfügen - zumindest theoretisch. MathML wird nicht von allen Browsern unterstützt,
+            außerdem ist es zu aufwändig für längere und kompliziertere Formeln. Daher werden Programme verwendet, die das
+            Erstellen des Markups übernehmen - diese basieren allerdings auf MathML. Hier ein einfaches Beispiel und wie
+            es aufgebaut wurde:
+        </div>
+
+        <div class="math-box-container">
+            <div class="math-box">
+
+                <math>
+                    <mi>a</mi>
+                    <msup>
+                        <mi>x</mi>
+                        <mn>2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <mi>b</mi>
+                    <mi>x</mi>
+                    <mo>+</mo>
+                    <msqrt>
+                        <mi>c</mi>
+                    </msqrt>
+                </math>
+
+
+            </div>
+            <div class="math-box">
+                <pre>
+    &lt;math&gt;
+        &lt;mi&gt;a&lt;/mi&gt;
+        &lt;msup&gt;
+            &lt;mi&gt;x&lt;/mi&gt;
+            &lt;mn&gt;2&lt;/mn&gt;
+        &lt;/msup&gt;
+        &lt;mo&gt;+&lt;/mo&gt;
+        &lt;mi&gt;b&lt;/mi&gt;
+        &lt;mi&gt;x&lt;/mi&gt;
+        &lt;mo&gt;+&lt;/mo&gt;
+        &lt;msqrt&gt;
+            &lt;mi&gt;c&lt;/mi&gt;
+        &lt;/msqrt&gt;
+    &lt;/math&gt;
+            </pre>
+            </div>
+
+            <div class="math-box text-box">
+                Achtung: Soll das Beispiel korrekt angezeigt werden, muss es mit Firefox oder Safari geöffnet werden.
+            </div>
+        </div>
+        <div class="text-box">
+            Wegen der schlechten Browserunterstützung, aber auch, weil die Erstellung von komplizierteren Formeln mittels MathML meist 
+            zu aufwändig wäre, werden teilweise immer noch Bilder zur Formeldarstellung verwendet, wie etwa <a href="https://de.wikipedia.org/wiki/Fourierreihe" 
+            target="_blank">auf dieser Wikipedia-Seite</a> (Stand Feb.2018), oder Programme für die Formelerstellung eingesetzt.
+            Eine weitere Möglichkeit wäre das Importieren einer Bibliothek, die MathML darstellen kann - versuch doch einmal, das Script-Tag 
+            im head hier im Code zu aktivieren, und sieh Dir die Seite davor und danach beispielsweise mit Chrome an.
+        </div>
+
+    </div>
+</body>
+
+</html>

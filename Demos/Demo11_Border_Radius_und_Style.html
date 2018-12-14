@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- script src von w3s -->
+
+    <style>
+        /* Beachte die BORDER-Properties! Unterschiedliche Rahmenmöglichkeiten  */
+
+
+        h1{
+            color: red;
+        }
+
+        h1{
+            color: blue;
+            color: green;
+        }
+
+
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #EEE5DE;
+        }
+
+        div:not(#container) {
+            margin: 15px;
+        }
+
+        .round1 {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: lawngreen;
+            border: 50px groove darkslategray;
+
+            /* runde Ecken mittels border-radius: 1 Wert gilt für alle 4 Ecken */
+            border-radius: 20px;
+        }
+
+        .round2 {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: lawngreen;
+            border: 5px outset darkslategray;
+
+            /* runde Ecken mittels border-radius: 2 Werte gelten für die Diagonale, beginnend oben links */
+            border-radius: 20px 0;
+        }
+
+        .round3 {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: lawngreen;
+            border: 5px dashed darkslategray;
+
+            /* runde Ecken mittels border-radius: 4 Werte - im Uhrzeigersinn, beginnend links oben */
+            border-radius: 20px 0 0 20px;
+        }
+
+        .round4 {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: lawngreen;
+            border: 5px dotted darkslategray;
+
+            /* runde Ecken mittels border-radius: Angaben können auch z.B. mit em, vw oder % gemacht werden;
+               theoretisch kann ich die unterschiedlichen Angaben auch mischen (beachte, wie sich das Aussehen
+               verändert, wenn man die Seitengröße verändert!!! */
+            border-radius: 3em 10vw 0 10%;
+        }
+
+        .round5 {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: lawngreen;
+            border: 5px double darkslategray;
+
+            /* runde Ecken mittels border-radius: auch ein Kreis lässt sich so darstellen */
+            border-radius: 50%;
+        }
+
+        .round6 {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: lawngreen;
+            border: 8px solid darkslategray;
+
+            /* Man kann auch nur eine Ecke auswählen, die abgerundet werden soll: (mit px, em,... ,%) */
+            border-bottom-right-radius: 100%;
+        }
+
+        .border1 {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+            border: 5px #636363;
+            border-style: dotted none double dashed;
+            /* unterschiedliche Border-Styles an EINEM Element: im Uhrzeigersinn, oben beginnend */
+        }
+
+        .border2 {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+            border: 5px #636363;
+            border-style: solid dashed;
+            /* erster Wert: oben und unten, zweiter Wert: rechts und links */
+        }
+
+        .border3 {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+            border: 5px #636363;
+            border-style: solid double dashed;
+            /* erster Wert: oben, zweiter Wert: rechts und links, dritter Wert: unten */
+            border-radius: 0 3em 0 0;
+        }
+
+        .border4 {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+            border: 5px #636363;
+            border-style: double dotted solid dashed;
+            border-radius: 50%;
+            /* unterschiedliche Border-Styles funktionieren natürlich auch mit Border-Radius kombiniert */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="round1"></div>
+        <div class="round2"></div>
+        <div class="round3"></div>
+        <div class="round4"></div>
+        <div class="round5"></div>
+        <div class="round6"></div>
+        <div class="border1"></div>
+        <div class="border2"></div>
+        <div class="border3"></div>
+        <div class="border4"></div>
+
+    </div>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>

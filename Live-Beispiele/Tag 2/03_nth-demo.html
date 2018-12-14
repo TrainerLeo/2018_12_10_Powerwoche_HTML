@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nth-Demo</title>
+    <style>
+        /* ungerade = odd, gerade = even */
+
+        p:nth-child(odd) {
+            color: red;
+        }
+
+        p:nth-of-type(odd) {
+            font-style: italic;
+        }
+
+        .green {
+            width: 50px;
+            height: 50px;
+            background-color: green;
+        }
+
+        .border-div{
+            background-color: burlywood;
+            /* border: 8px groove aquamarine; */
+        }
+    </style>
+</head>
+
+<body>
+    <p>Paragraph über dem braunen Div.</p>
+    <div class="border-div">
+        <p>Das ist Paragraph Nr. 1</p>
+        <p>Das ist Paragraph Nr. 2</p>
+        <p>Das ist Paragraph Nr. 3</p>
+        <div class="green">Text</div>
+        <p>Das ist Paragraph Nr. 4</p>
+        <p>Das ist Paragraph Nr. 5</p>
+    </div>
+    <p>Das ist Paragraph Nr. 6</p>
+    <p>Das ist Paragraph Nr. 7</p>
+    <p>Das ist Paragraph Nr. 8</p>
+    <p>Das ist Paragraph Nr. 9</p>
+
+    <!-- <script>
+        document.getElementById('id-name');
+        document.getElementsByClassName('class-name');
+        document.getElementsByTagName('p');
+    </script> -->
+</body>
+
+</html>

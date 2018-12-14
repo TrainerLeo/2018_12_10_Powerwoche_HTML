@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Teil 1</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- script src von w3s -->
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    #container {
+      width: 85%;
+      background-color: blue;
+      margin: 0 auto;
+    }
+
+    /* Background-DEMO: Farbindikator: z.B. reines Blau, damit man sieht, wo etwas nicht passt (z.B. ein Unfall mit Margin) */
+
+    #content {
+      width: 100%;
+      background-color: #C1CDC1;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    header {
+      background-color: #698B69;
+      padding: 1rem;
+      color: ivory;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .contentBox {
+      background-color: ivory;
+      margin: .3rem auto;
+      padding: 1rem;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>Wir erstellen ein Canvas-Element</h1>
+    </header>
+    <div id="content">
+      <div class="contentBox">
+        <canvas id="myCanvas" width="500" height="300" style="border: 1px solid gray;">
+          Ihr Browser unterstützt kein HTML5 Canvas!
+        </canvas>
+      </div>
+
+      <div class="contentBox">
+        <p>
+          <button onclick="drawCanvas();">Zeichnen</button>
+          <button onclick="clearCanvas();">Löschen</button>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext('2d');
+
+    function drawCanvas() {
+      if (ctx) {
+
+        // SCHATTEN (für alle Elemente)
+        /*
+        ctx.shadowColor = "black";
+        ctx.shadowBlur = 20;
+        ctx.shadowOffsetX = 10;
+        ctx.shadowOffsetY = 10;
+        */
+
+        // rotes Rechteck
+        ctx.fillStyle = "#ff0000";
+        ctx.fillRect(10, 10, 150, 150);
+
+        // blaues Rechteck
+        ctx.fillStyle = "#00f"; // faule Schreibweise für #0000ff
+        ctx.fillRect(170, 10, 150, 150);
+
+        // grün umrahmtes, leeres Rechteck
+        ctx.strokeStyle = "green";
+        // ctx.lineWidth = 5;  //Wie dick soll der Rahmen sein?
+        ctx.strokeRect(330, 10, 150, 150);
+
+
+        /* // damit das blaue schräg versetzt über dem roten Rechteck liegt:   
+                ctx.fillStyle = "#0000ff";
+                ctx.fillRect(100, 30, 150, 150);
+              */
+
+        // ODER andere Schreibweise (gleiches Ergebnis für das rote Rechteck wie oben):
+        /*
+        ctx.rect(15, 15, 150, 150);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        */
+
+        // TEXT
+        var text = "Unser Text";
+
+        ctx.fillStyle = "yellow";
+        ctx.font = "30px Arial";
+        ctx.fillText(text, 10, 230);
+        //ctx.strokeStyle= "orange"; //wenn hier kein neuer strokeStyle angegeben wird, wird der zuerst angegebene (grün) übernommen
+        ctx.strokeText(' ist der beste.', 10 + ctx.measureText(text).width, 230);
+
+
+
+
+      }
+
+    } // Ende der "drawCanvas"-Funktion
+
+
+    function clearCanvas() {
+      // Option 1 
+      //ctx.fillStyle = "#fff";
+      //ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Option 2
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Option 3  RESET
+      //canvas.width = canvas.width;
+    }
+
+
+
+
+  </script>
+
+</body>
+
+</html>

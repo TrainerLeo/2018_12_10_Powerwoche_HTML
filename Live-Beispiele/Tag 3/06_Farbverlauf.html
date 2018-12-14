@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Farbverlauf</title>
+    <style>
+        body{
+            background: radial-gradient(white, green) no-repeat;
+            background-attachment: fixed;
+            height: 800vh;
+        }
+        .container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        div[class^="demo"]{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            float: left;
+            margin: 20px;
+        }
+
+        .demo01{
+            background: linear-gradient(yellow, blue);
+        }
+
+        .demo02{
+            background: linear-gradient(red, orange, yellow, green, cyan, blue, purple, indigo);
+        }
+
+        .demo03{
+            background: linear-gradient(60deg, red, orange, yellow, green, cyan, blue, purple, indigo);
+        }
+
+        .demo04{
+            background: linear-gradient(45deg, red 0%, red 33%, orange 33%, orange 66%, yellow 66%, yellow 100%);
+        }
+
+        .demo05{
+            background: linear-gradient(to right, yellow, blue);
+        }
+
+        .demo06{
+            background: radial-gradient(yellow, blue);
+        }
+
+        div.demo07{
+            width: 300px;
+            background: radial-gradient(yellow, blue);
+        }
+
+        .demo08{
+            background: radial-gradient(50px 50px, yellow, blue);
+        }
+
+        .demo09{
+            background: radial-gradient(50px 50px at 0 0, yellow, blue);
+        }
+
+        div.demo09{
+            border: none;
+            border-radius: 50%;
+            background: radial-gradient(80px 80px at 50px 50px, whitesmoke, blue);
+            box-shadow: 20px 50px 50px rgba(0, 0, 0, 0.7);
+        }
+
+        .demo10{
+            background: linear-gradient(rgb(131, 189, 248), dodgerblue);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="demo01">01</div>
+        <div class="demo02">02</div>
+        <div class="demo03">03</div>
+        <div class="demo04">04</div>
+        <div class="demo05">05</div>
+        <div class="demo06">06</div>
+        <div class="demo07">07</div>
+        <div class="demo08">08</div>
+        <div class="demo09">09</div>
+        <div class="demo10">10</div>
+    </div>
+</body>
+</html>

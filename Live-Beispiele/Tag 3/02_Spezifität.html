@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="w3c.css">
+    <link rel="stylesheet" href="special.css">
+    
+    <title>Spezifität</title>
+
+    <style>
+        p{
+            color: red;
+        }
+
+        .my-class{
+            color: blue;
+        }
+
+        #my-great-id{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <p>Das ist Paragraph Nr. 1</p>
+    <p class="my-class">Das ist Paragraph Nr. 2</p>
+    <p>Das ist Paragraph Nr. 3</p>
+    <p>Das ist Paragraph Nr. 4</p>
+    <p class="my-class" id="my-great-id">Das ist Paragraph Nr. 5</p>
+    <div class="test"> TEST! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dolor!</div>
+</body>
+</html>

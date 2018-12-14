@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Progress und Meter</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+
+        .content-box {
+            width: 80%;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #f3f3f3;
+            box-shadow: 0.4em 0.4em 0.6em rgba(0, 128, 0, 0.4), 0.2em 0.2em 0.4em rgba(0, 128, 0, 0.7);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .text-box {
+            padding: 2em;
+            border: 1px solid green;
+            width: 49%;
+        }
+
+        label {
+            display: inline-block;
+            width: 100%;
+            padding: .2em;
+            text-align: right;
+        }
+
+        label>* {
+            width: 150px;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-box">
+        <div class="text-box">
+            <!-- Ein Label kann sich vor einem input-Feld befinden, oder es, wie hier, 
+        auch umschließen: -->
+            <!-- ein Placeholder ist ein ausgegrauter Text in einem
+        (input-)Element, der verschwindet, sobald etwas eingegeben wird.
+        Oft ein Beispieltext oder eine Anweisung, was in dieses Feld
+        eingegeben werden soll. -->
+            <!-- onchange bedeutet, dass, wenn in diesem Feld etwas eingegeben wird (wenn
+        sich also etwas verändert), die folgende Funktion aufgerufen wird -->
+
+            <p>
+                Ein Fortschrittsbalken oder &lt;progress&gt;-Bar:
+            </p>
+            <br/>
+            <form>
+                <label>Nachname:
+                    <input type="text" placeholder="Mustermann" onchange="update()">
+                </label>
+                <label>Vorname:
+                    <input type="text" placeholder="Max" onchange="update()">
+                </label>
+                <label>Wohnort:
+                    <input type="text" placeholder="Wien" onchange="update()">
+                </label>
+                <label>Fortschritt:
+                    <progress id="progr" value="0" max="3"></progress>
+                </label>
+            </form>
+            <!-- Dem Fortschrittsbalken sage ich mit max, wieviele Schritte gemacht werden sollen,
+           um 100% zu erreichen - in unserem Fall sind wir fertig, wenn wir 3 Felder ausgefüllt haben. -->
+
+
+        </div>
+        <div class="text-box">
+                <p>Eine Schätzung mittels &lt;meter&gt; darstellen:</p>
+                <br/>
+                <meter value="0.7">70%</meter>
+                <br>
+                <meter value="3" min="0" max="10">3 von 10</meter>
+                <br/>
+                <br/>
+                <p>
+                    Oben werden 70%, unten 3 von 10 dargestellt (siehe Code). Der Text zwischen den &lt;meter&gt;-Tags
+                    wird nur angezeigt, wenn keine Browserunterstützung besteht.
+                </p>
+                <br/>
+                <p>
+                    &lt;meter&gt; genießt nur beschränkten Browsersupport. Die Sinnhaftigkeit dieses Tags ist nicht nur 
+                    deshalb fraglich...
+                </p>
+        </div>
+    </div>
+    <script>  
+
+        /* mit dieser Funktion frage ich ab, wieviele Elemente mein Formular enthält, durchlaufe
+           eine for-Schleife mit einem Zähler für die Länge des Formulars und erhöhe den Fortschrittsbalken
+           (progress-bar) um 1, wenn der Inhalt kein Leerstring ist. */
+
+        function update() {
+
+            var complete = 0;
+
+            for (var i = 0; i < document.forms[0].elements.length; i++) {
+
+                var inhalt = document.forms[0].elements[i];
+
+                if (inhalt.value != '') complete++;
+            }
+
+            document.getElementById('progr').value = complete;
+        }
+
+    </script>
+
+</body>
+
+</html>

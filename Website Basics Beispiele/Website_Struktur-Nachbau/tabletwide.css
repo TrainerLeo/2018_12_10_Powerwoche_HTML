@@ -1,0 +1,55 @@
+#grid-container{
+    grid-template-columns: repeat(8, 1fr) auto;
+}
+
+#company-name-box{
+    grid-column: 1/10;
+}
+
+#top-navbar-container{
+    grid-column: 1/10;
+/*     position: sticky;
+    top:0; */
+}
+
+#main-content-container{
+    grid-column: 3/9;
+}
+
+#right-add-container{
+    grid-column: 9/10;
+}
+
+#bottom-image-container{
+    grid-column: 3/10;
+}
+
+#footer-info-container{
+    grid-column: 3/10;
+}
+
+#page-footer{
+    grid-column: 1/10;
+}
+
+#side-navbar-container{
+    grid-row: 3/8;
+}
+
+#side-navbar-box{
+    font-size: 0.9em;
+}
+
+#top-navbar-container ul li a{
+    padding: 0.3rem 1rem;
+}
+
+.side-navbar-header{
+    font-size: 1.1em;
+}
+
+.add-box{
+    max-width: 100px;
+    max-height: 333px;
+    margin: 0.5rem;
+}
